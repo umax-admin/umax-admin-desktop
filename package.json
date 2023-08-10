@@ -1,0 +1,43 @@
+{
+  "name": "Umax",
+  "version": "1.0.1",
+  "private": true,
+  "author": "ahKevinXy <ahkevinxy@gmail.com>",
+  "scripts": {
+    "build": "max build",
+    "dev": "max dev",
+    "format": "prettier --cache --write .",
+    "postinstall": "max setup",
+    "prepare": "husky install",
+    "setup": "max setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/charts": "^1.4.2",
+    "@ant-design/icons": "^5.1.4",
+    "@ant-design/pro-components": "^2.6.7",
+    "@ant-design/use-emotion-css": "^1.0.4",
+    "@umijs/max": "^4.0.72",
+    "antd": "^5.7.3",
+    "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "omit.js": "^2.0.2",
+    "rc-menu": "^9.11.0",
+    "rc-util": "^5.32.2",
+    "react-countup": "^6.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^5.0.3",
+    "@umijs/plugin-electron": "^0.2.0",
+    "electron": "23.1.1"
+
+  }
+}
