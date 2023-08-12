@@ -19,7 +19,7 @@ export default defineConfig({
   // runtimePublicPath:{
   //
   // },
-  hash: true,
+  // hash: true,
   access: {},
   model: {},
   initialState: {},

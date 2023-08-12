@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { PageContainer, ProCard, WaterMark } from '@ant-design/pro-components';
 
-import { Layout, Statistic } from 'antd';
+import { Layout, Statistic,Button } from 'antd';
 
 import { Footer, Header } from '@/components/Layout/Home';
 import dayjs from 'dayjs';
@@ -68,6 +68,15 @@ const Index: React.FC = () => {
                 />
               </ProCard>
             </ProCard.Group>
+
+            <Button
+                onClick={async ()=>{
+                  const res =   await window.electron.ipcRenderer.sendMessage('ipc-umax',"登录出去的消息")
+                  console.log(res)
+                }}
+            >
+              打开对话框
+            </Button>
           </PageContainer>
         </Layout.Content>
         <Layout.Footer>
