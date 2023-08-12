@@ -28,13 +28,5 @@ const menuBuilder = new MenuBuilder(mainWindow);
 menuBuilder.buildMenu();
 
 
-ipcMain.on("ipc-umax",(event,args)=>{
 
-    shell.openExternal("https://www.baidu.com")
-
-})
-ipcMain.handle("ipc-umax",(event,args)=>{
-    shell.openExternal("https://www.baidu.com")
-    return new Date()
-})
 getBrowserWindowRuntime().webContents.openDevTools();

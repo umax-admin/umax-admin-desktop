@@ -192,7 +192,7 @@ export default class MenuBuilder {
     buildDefaultTemplate() {
         const templateDefault = [
             {
-                label: '&File',
+                label: '文件',
                 submenu: [
                     {
                         label: '&Open',
@@ -208,20 +208,20 @@ export default class MenuBuilder {
                 ],
             },
             {
-                label: '&View',
+                label: '视图',
                 submenu:
                     process.env.NODE_ENV === 'development' ||
                     process.env.DEBUG_PROD === 'true'
                         ? [
                             {
-                                label: '&Reload',
+                                label: '重新载入',
                                 accelerator: 'Ctrl+R',
                                 click: () => {
                                     this.mainWindow.webContents.reload();
                                 },
                             },
                             {
-                                label: 'Toggle &Full Screen',
+                                label: '全屏',
                                 accelerator: 'F11',
                                 click: () => {
                                     this.mainWindow.setFullScreen(
@@ -230,7 +230,7 @@ export default class MenuBuilder {
                                 },
                             },
                             {
-                                label: 'Toggle &Developer Tools',
+                                label: '打开调试模式',
                                 accelerator: 'Alt+Ctrl+I',
                                 click: () => {
                                     this.mainWindow.webContents.toggleDevTools();
@@ -239,7 +239,7 @@ export default class MenuBuilder {
                         ]
                         : [
                             {
-                                label: 'Toggle &Full Screen',
+                                label: '全屏',
                                 accelerator: 'F11',
                                 click: () => {
                                     this.mainWindow.setFullScreen(
@@ -247,6 +247,14 @@ export default class MenuBuilder {
                                     );
                                 },
                             },
+                            {
+                                label: '打开调试模式',
+                                accelerator: 'Alt+Ctrl+I',
+                                click: () => {
+                                    this.mainWindow.webContents.toggleDevTools();
+                                },
+                            },
+
                         ],
             },
             {
@@ -276,6 +284,13 @@ export default class MenuBuilder {
                         label: '查找问题点',
                         click() {
                             shell.openExternal('https://umax-admin.github.io/umax-admin/');
+                        },
+                    },
+                    {
+                        label: '打开调试模式',
+                        accelerator: 'Alt+Command+I',
+                        click: () => {
+                            this.mainWindow.webContents.toggleDevTools();
                         },
                     },
                 ],

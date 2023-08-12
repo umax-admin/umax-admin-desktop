@@ -2,7 +2,7 @@ import { defineConfig } from '@umijs/max';
 import zhCN from 'antd/locale/zh_CN';
 import defaultSettings from './defaultSettings';
 import router from './router';
-import { Platform, Arch } from '@umijs/plugin-electron';
+import { Platform, Arch } from '@umax-admin/umi-plugin-electron';
 export default defineConfig({
   antd: {
     configProvider: {
@@ -42,13 +42,14 @@ export default defineConfig({
   // analytics: {
   //   ga_v2: 'G-QTKV715HW0', // google analytics 的 key (GA 4)
   // },
-  plugins: ['@umijs/plugin-electron'],
+  plugins: ['@umax-admin/umi-plugin-electron'],
   // copy: ["README.md", "dist/"],
   metas: [{ name: 'description', content: '最好的后台管理' }],
   // mountElementId: 'umax-admin',
   electron: {
     builder: {
       targets: Platform.MAC.createTarget(['dmg'], Arch.x64),
+
     },
   },
   // writeToDisk: true

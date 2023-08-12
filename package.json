@@ -30,14 +30,13 @@
   "devDependencies": {
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
+    "@umax-admin/umi-plugin-electron": "^0.0.3",
+    "electron": "23.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "prettier-plugin-organize-imports": "^3.2.2",
     "prettier-plugin-packagejson": "^2.4.3",
-    "typescript": "^5.0.3",
-    "@umijs/plugin-electron": "^0.2.0",
-    "electron": "23.1.1"
-
+    "typescript": "^5.0.3"
   }
 }
